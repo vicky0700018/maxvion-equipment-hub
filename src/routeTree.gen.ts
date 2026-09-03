@@ -10,33 +10,284 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EquipmentRouteImport } from './routes/equipment'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SoftwareDemoRouteImport } from './routes/software-demo'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as AdminAmcRouteImport } from './routes/admin.amc'
+import { Route as AdminCalibrationRouteImport } from './routes/admin.calibration'
+import { Route as AdminComplianceRouteImport } from './routes/admin.compliance'
+import { Route as AdminCustomersRouteImport } from './routes/admin.customers'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
+import { Route as AdminInventoryRouteImport } from './routes/admin.inventory'
+import { Route as AdminInvoicesRouteImport } from './routes/admin.invoices'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminQuotationsRouteImport } from './routes/admin.quotations'
+import { Route as AdminSalesRouteImport } from './routes/admin.sales'
+import { Route as AdminSerialNumbersRouteImport } from './routes/admin.serial-numbers'
+import { Route as AdminServiceRouteImport } from './routes/admin.service'
+import { Route as AdminWarrantyRouteImport } from './routes/admin.warranty'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipmentRoute = EquipmentRouteImport.update({
+  id: '/equipment',
+  path: '/equipment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoftwareDemoRoute = SoftwareDemoRouteImport.update({
+  id: '/software-demo',
+  path: '/software-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAmcRoute = AdminAmcRouteImport.update({
+  id: '/admin/amc',
+  path: '/admin/amc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCalibrationRoute = AdminCalibrationRouteImport.update({
+  id: '/admin/calibration',
+  path: '/admin/calibration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminComplianceRoute = AdminComplianceRouteImport.update({
+  id: '/admin/compliance',
+  path: '/admin/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCustomersRoute = AdminCustomersRouteImport.update({
+  id: '/admin/customers',
+  path: '/admin/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminInventoryRoute = AdminInventoryRouteImport.update({
+  id: '/admin/inventory',
+  path: '/admin/inventory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminInvoicesRoute = AdminInvoicesRouteImport.update({
+  id: '/admin/invoices',
+  path: '/admin/invoices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminQuotationsRoute = AdminQuotationsRouteImport.update({
+  id: '/admin/quotations',
+  path: '/admin/quotations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSalesRoute = AdminSalesRouteImport.update({
+  id: '/admin/sales',
+  path: '/admin/sales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSerialNumbersRoute = AdminSerialNumbersRouteImport.update({
+  id: '/admin/serial-numbers',
+  path: '/admin/serial-numbers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminServiceRoute = AdminServiceRouteImport.update({
+  id: '/admin/service',
+  path: '/admin/service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminWarrantyRoute = AdminWarrantyRouteImport.update({
+  id: '/admin/warranty',
+  path: '/admin/warranty',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment': typeof EquipmentRoute
+  '/services': typeof ServicesRoute
+  '/software-demo': typeof SoftwareDemoRoute
+  '/solutions': typeof SolutionsRoute
+  '/admin/amc': typeof AdminAmcRoute
+  '/admin/calibration': typeof AdminCalibrationRoute
+  '/admin/compliance': typeof AdminComplianceRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/invoices': typeof AdminInvoicesRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/serial-numbers': typeof AdminSerialNumbersRoute
+  '/admin/service': typeof AdminServiceRoute
+  '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment': typeof EquipmentRoute
+  '/services': typeof ServicesRoute
+  '/software-demo': typeof SoftwareDemoRoute
+  '/solutions': typeof SolutionsRoute
+  '/admin/amc': typeof AdminAmcRoute
+  '/admin/calibration': typeof AdminCalibrationRoute
+  '/admin/compliance': typeof AdminComplianceRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/invoices': typeof AdminInvoicesRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/serial-numbers': typeof AdminSerialNumbersRoute
+  '/admin/service': typeof AdminServiceRoute
+  '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment': typeof EquipmentRoute
+  '/services': typeof ServicesRoute
+  '/software-demo': typeof SoftwareDemoRoute
+  '/solutions': typeof SolutionsRoute
+  '/admin/amc': typeof AdminAmcRoute
+  '/admin/calibration': typeof AdminCalibrationRoute
+  '/admin/compliance': typeof AdminComplianceRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/invoices': typeof AdminInvoicesRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/serial-numbers': typeof AdminSerialNumbersRoute
+  '/admin/service': typeof AdminServiceRoute
+  '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/equipment'
+    | '/services'
+    | '/software-demo'
+    | '/solutions'
+    | '/admin/amc'
+    | '/admin/calibration'
+    | '/admin/compliance'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/invoices'
+    | '/admin/login'
+    | '/admin/quotations'
+    | '/admin/sales'
+    | '/admin/serial-numbers'
+    | '/admin/service'
+    | '/admin/warranty'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/equipment'
+    | '/services'
+    | '/software-demo'
+    | '/solutions'
+    | '/admin/amc'
+    | '/admin/calibration'
+    | '/admin/compliance'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/invoices'
+    | '/admin/login'
+    | '/admin/quotations'
+    | '/admin/sales'
+    | '/admin/serial-numbers'
+    | '/admin/service'
+    | '/admin/warranty'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/equipment'
+    | '/services'
+    | '/software-demo'
+    | '/solutions'
+    | '/admin/amc'
+    | '/admin/calibration'
+    | '/admin/compliance'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/invoices'
+    | '/admin/login'
+    | '/admin/quotations'
+    | '/admin/sales'
+    | '/admin/serial-numbers'
+    | '/admin/service'
+    | '/admin/warranty'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  EquipmentRoute: typeof EquipmentRoute
+  ServicesRoute: typeof ServicesRoute
+  SoftwareDemoRoute: typeof SoftwareDemoRoute
+  SolutionsRoute: typeof SolutionsRoute
+  AdminAmcRoute: typeof AdminAmcRoute
+  AdminCalibrationRoute: typeof AdminCalibrationRoute
+  AdminComplianceRoute: typeof AdminComplianceRoute
+  AdminCustomersRoute: typeof AdminCustomersRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminInventoryRoute: typeof AdminInventoryRoute
+  AdminInvoicesRoute: typeof AdminInvoicesRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminQuotationsRoute: typeof AdminQuotationsRoute
+  AdminSalesRoute: typeof AdminSalesRoute
+  AdminSerialNumbersRoute: typeof AdminSerialNumbersRoute
+  AdminServiceRoute: typeof AdminServiceRoute
+  AdminWarrantyRoute: typeof AdminWarrantyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +299,163 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipment': {
+      id: '/equipment'
+      path: '/equipment'
+      fullPath: '/equipment'
+      preLoaderRoute: typeof EquipmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/software-demo': {
+      id: '/software-demo'
+      path: '/software-demo'
+      fullPath: '/software-demo'
+      preLoaderRoute: typeof SoftwareDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/amc': {
+      id: '/admin/amc'
+      path: '/admin/amc'
+      fullPath: '/admin/amc'
+      preLoaderRoute: typeof AdminAmcRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/calibration': {
+      id: '/admin/calibration'
+      path: '/admin/calibration'
+      fullPath: '/admin/calibration'
+      preLoaderRoute: typeof AdminCalibrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/compliance': {
+      id: '/admin/compliance'
+      path: '/admin/compliance'
+      fullPath: '/admin/compliance'
+      preLoaderRoute: typeof AdminComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/customers': {
+      id: '/admin/customers'
+      path: '/admin/customers'
+      fullPath: '/admin/customers'
+      preLoaderRoute: typeof AdminCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/inventory': {
+      id: '/admin/inventory'
+      path: '/admin/inventory'
+      fullPath: '/admin/inventory'
+      preLoaderRoute: typeof AdminInventoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/invoices': {
+      id: '/admin/invoices'
+      path: '/admin/invoices'
+      fullPath: '/admin/invoices'
+      preLoaderRoute: typeof AdminInvoicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/quotations': {
+      id: '/admin/quotations'
+      path: '/admin/quotations'
+      fullPath: '/admin/quotations'
+      preLoaderRoute: typeof AdminQuotationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/sales': {
+      id: '/admin/sales'
+      path: '/admin/sales'
+      fullPath: '/admin/sales'
+      preLoaderRoute: typeof AdminSalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/serial-numbers': {
+      id: '/admin/serial-numbers'
+      path: '/admin/serial-numbers'
+      fullPath: '/admin/serial-numbers'
+      preLoaderRoute: typeof AdminSerialNumbersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/service': {
+      id: '/admin/service'
+      path: '/admin/service'
+      fullPath: '/admin/service'
+      preLoaderRoute: typeof AdminServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/warranty': {
+      id: '/admin/warranty'
+      path: '/admin/warranty'
+      fullPath: '/admin/warranty'
+      preLoaderRoute: typeof AdminWarrantyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  EquipmentRoute: EquipmentRoute,
+  ServicesRoute: ServicesRoute,
+  SoftwareDemoRoute: SoftwareDemoRoute,
+  SolutionsRoute: SolutionsRoute,
+  AdminAmcRoute: AdminAmcRoute,
+  AdminCalibrationRoute: AdminCalibrationRoute,
+  AdminComplianceRoute: AdminComplianceRoute,
+  AdminCustomersRoute: AdminCustomersRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminInventoryRoute: AdminInventoryRoute,
+  AdminInvoicesRoute: AdminInvoicesRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminQuotationsRoute: AdminQuotationsRoute,
+  AdminSalesRoute: AdminSalesRoute,
+  AdminSerialNumbersRoute: AdminSerialNumbersRoute,
+  AdminServiceRoute: AdminServiceRoute,
+  AdminWarrantyRoute: AdminWarrantyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
