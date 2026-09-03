@@ -24,10 +24,14 @@ import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 import { Route as AdminInventoryRouteImport } from './routes/admin.inventory'
 import { Route as AdminInvoicesRouteImport } from './routes/admin.invoices'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminPurchaseRouteImport } from './routes/admin.purchase'
 import { Route as AdminQuotationsRouteImport } from './routes/admin.quotations'
+import { Route as AdminReportsRouteImport } from './routes/admin.reports'
 import { Route as AdminSalesRouteImport } from './routes/admin.sales'
 import { Route as AdminSerialNumbersRouteImport } from './routes/admin.serial-numbers'
 import { Route as AdminServiceRouteImport } from './routes/admin.service'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
+import { Route as AdminVendorsRouteImport } from './routes/admin.vendors'
 import { Route as AdminWarrantyRouteImport } from './routes/admin.warranty'
 
 const IndexRoute = IndexRouteImport.update({
@@ -105,9 +109,19 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminPurchaseRoute = AdminPurchaseRouteImport.update({
+  id: '/admin/purchase',
+  path: '/admin/purchase',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminQuotationsRoute = AdminQuotationsRouteImport.update({
   id: '/admin/quotations',
   path: '/admin/quotations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminReportsRoute = AdminReportsRouteImport.update({
+  id: '/admin/reports',
+  path: '/admin/reports',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminSalesRoute = AdminSalesRouteImport.update({
@@ -123,6 +137,16 @@ const AdminSerialNumbersRoute = AdminSerialNumbersRouteImport.update({
 const AdminServiceRoute = AdminServiceRouteImport.update({
   id: '/admin/service',
   path: '/admin/service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminVendorsRoute = AdminVendorsRouteImport.update({
+  id: '/admin/vendors',
+  path: '/admin/vendors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminWarrantyRoute = AdminWarrantyRouteImport.update({
@@ -147,10 +171,14 @@ export interface FileRoutesByFullPath {
   '/admin/inventory': typeof AdminInventoryRoute
   '/admin/invoices': typeof AdminInvoicesRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/purchase': typeof AdminPurchaseRoute
   '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/reports': typeof AdminReportsRoute
   '/admin/sales': typeof AdminSalesRoute
   '/admin/serial-numbers': typeof AdminSerialNumbersRoute
   '/admin/service': typeof AdminServiceRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/vendors': typeof AdminVendorsRoute
   '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRoutesByTo {
@@ -169,10 +197,14 @@ export interface FileRoutesByTo {
   '/admin/inventory': typeof AdminInventoryRoute
   '/admin/invoices': typeof AdminInvoicesRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/purchase': typeof AdminPurchaseRoute
   '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/reports': typeof AdminReportsRoute
   '/admin/sales': typeof AdminSalesRoute
   '/admin/serial-numbers': typeof AdminSerialNumbersRoute
   '/admin/service': typeof AdminServiceRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/vendors': typeof AdminVendorsRoute
   '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRoutesById {
@@ -192,10 +224,14 @@ export interface FileRoutesById {
   '/admin/inventory': typeof AdminInventoryRoute
   '/admin/invoices': typeof AdminInvoicesRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/purchase': typeof AdminPurchaseRoute
   '/admin/quotations': typeof AdminQuotationsRoute
+  '/admin/reports': typeof AdminReportsRoute
   '/admin/sales': typeof AdminSalesRoute
   '/admin/serial-numbers': typeof AdminSerialNumbersRoute
   '/admin/service': typeof AdminServiceRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/vendors': typeof AdminVendorsRoute
   '/admin/warranty': typeof AdminWarrantyRoute
 }
 export interface FileRouteTypes {
@@ -216,10 +252,14 @@ export interface FileRouteTypes {
     | '/admin/inventory'
     | '/admin/invoices'
     | '/admin/login'
+    | '/admin/purchase'
     | '/admin/quotations'
+    | '/admin/reports'
     | '/admin/sales'
     | '/admin/serial-numbers'
     | '/admin/service'
+    | '/admin/settings'
+    | '/admin/vendors'
     | '/admin/warranty'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -238,10 +278,14 @@ export interface FileRouteTypes {
     | '/admin/inventory'
     | '/admin/invoices'
     | '/admin/login'
+    | '/admin/purchase'
     | '/admin/quotations'
+    | '/admin/reports'
     | '/admin/sales'
     | '/admin/serial-numbers'
     | '/admin/service'
+    | '/admin/settings'
+    | '/admin/vendors'
     | '/admin/warranty'
   id:
     | '__root__'
@@ -260,10 +304,14 @@ export interface FileRouteTypes {
     | '/admin/inventory'
     | '/admin/invoices'
     | '/admin/login'
+    | '/admin/purchase'
     | '/admin/quotations'
+    | '/admin/reports'
     | '/admin/sales'
     | '/admin/serial-numbers'
     | '/admin/service'
+    | '/admin/settings'
+    | '/admin/vendors'
     | '/admin/warranty'
   fileRoutesById: FileRoutesById
 }
@@ -283,10 +331,14 @@ export interface RootRouteChildren {
   AdminInventoryRoute: typeof AdminInventoryRoute
   AdminInvoicesRoute: typeof AdminInvoicesRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  AdminPurchaseRoute: typeof AdminPurchaseRoute
   AdminQuotationsRoute: typeof AdminQuotationsRoute
+  AdminReportsRoute: typeof AdminReportsRoute
   AdminSalesRoute: typeof AdminSalesRoute
   AdminSerialNumbersRoute: typeof AdminSerialNumbersRoute
   AdminServiceRoute: typeof AdminServiceRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminVendorsRoute: typeof AdminVendorsRoute
   AdminWarrantyRoute: typeof AdminWarrantyRoute
 }
 
@@ -397,11 +449,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/purchase': {
+      id: '/admin/purchase'
+      path: '/admin/purchase'
+      fullPath: '/admin/purchase'
+      preLoaderRoute: typeof AdminPurchaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/quotations': {
       id: '/admin/quotations'
       path: '/admin/quotations'
       fullPath: '/admin/quotations'
       preLoaderRoute: typeof AdminQuotationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/reports': {
+      id: '/admin/reports'
+      path: '/admin/reports'
+      fullPath: '/admin/reports'
+      preLoaderRoute: typeof AdminReportsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/sales': {
@@ -423,6 +489,20 @@ declare module '@tanstack/react-router' {
       path: '/admin/service'
       fullPath: '/admin/service'
       preLoaderRoute: typeof AdminServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/vendors': {
+      id: '/admin/vendors'
+      path: '/admin/vendors'
+      fullPath: '/admin/vendors'
+      preLoaderRoute: typeof AdminVendorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/warranty': {
@@ -451,10 +531,14 @@ const rootRouteChildren: RootRouteChildren = {
   AdminInventoryRoute: AdminInventoryRoute,
   AdminInvoicesRoute: AdminInvoicesRoute,
   AdminLoginRoute: AdminLoginRoute,
+  AdminPurchaseRoute: AdminPurchaseRoute,
   AdminQuotationsRoute: AdminQuotationsRoute,
+  AdminReportsRoute: AdminReportsRoute,
   AdminSalesRoute: AdminSalesRoute,
   AdminSerialNumbersRoute: AdminSerialNumbersRoute,
   AdminServiceRoute: AdminServiceRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminVendorsRoute: AdminVendorsRoute,
   AdminWarrantyRoute: AdminWarrantyRoute,
 }
 export const routeTree = rootRouteImport
